@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Cairo', 'Tajawal', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Tajawal', 'Cairo', var(--font-sans);
+
+  --color-store-50: #f0f9ff;
+  --color-store-100: #e0f2fe;
+  --color-store-500: #0ea5e9;
+  --color-store-600: #0284c7;
+  --color-store-900: #0c4a6e;
+
+  --color-pos-800: #1e293b;
+  --color-pos-900: #0f172a;
+  --color-pos-accent: #34d399;
+
+  --color-admin-700: #334155;
+  --color-admin-accent: #8b5cf6;
+}
+
+@keyframes filter-drawer-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0.96;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.filter-drawer-panel {
+  animation: filter-drawer-in 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    @apply m-0 min-h-svh bg-slate-50 text-slate-900;
+    font-feature-settings: 'kern' 1;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #root {
+    @apply min-h-svh min-w-0;
+  }
+}
+
+/* Safe areas (notch / home indicator) — storefront bottom nav + main padding use env() inline */
+@supports (padding: max(0px)) {
+  .safe-pb {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* Touch targets: buttons/links in admin can use touch-manipulation via Tailwind */
+@layer utilities {
+  .touch-app {
+    touch-action: manipulation;
+  }
+}
