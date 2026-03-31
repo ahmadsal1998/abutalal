@@ -1,0 +1,22 @@
+{
+  "name": "أبو طلال للموبايل",
+  "short_name": "أبو طلال",
+  "description": "متجر إلكتروني ولوحة إدارة — تجربة تطبيق على الجوال والويب.",
+  "theme_color": "#FCD34D",
+  "background_color": "#FEF9C3",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "start_url": "/",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["shopping", "business"],
+  "icons": [
+    {
+      "src": "/pwa-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
