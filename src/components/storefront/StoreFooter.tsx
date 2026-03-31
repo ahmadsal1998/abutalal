@@ -34,15 +34,24 @@ export function StoreFooter({ settings: settingsProp }: StoreFooterProps) {
   const privacyPage = pages.find((p) => p.path === '/page/privacy')
   const termsPage = pages.find((p) => p.path === '/page/terms')
 
-  const logoBlock = (
-    <Link
-      to="/"
-      className="font-display text-xl font-bold tracking-tight text-[var(--store-footer-text)]"
-    >
-      {settings.header.logoText}
-      <span style={{ color: accent }}>.</span>
-    </Link>
-  )
+  const logoBlock =
+    settings.header.showLogoImage && settings.header.logoImageUrl ? (
+      <Link to="/" className="inline-flex max-w-full">
+        <img
+          src={settings.header.logoImageUrl}
+          alt=""
+          className="h-10 w-auto max-w-[180px] object-contain"
+        />
+      </Link>
+    ) : (
+      <Link
+        to="/"
+        className="font-display text-xl font-bold tracking-tight text-[var(--store-footer-text)]"
+      >
+        {settings.header.logoText}
+        <span style={{ color: accent }}>.</span>
+      </Link>
+    )
 
   const socialRow = (
     <div className="mt-6 flex gap-3">

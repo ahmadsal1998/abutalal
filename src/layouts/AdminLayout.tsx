@@ -146,29 +146,36 @@ export function AdminLayout() {
             }`}
           >
             {navCompact ? (
-              <div
-                className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl bg-violet-600 font-display text-sm font-bold text-white shadow-sm shadow-violet-900/20"
+              <img
+                src="/app-icon.png"
+                alt=""
+                className="mx-auto h-11 w-11 rounded-xl object-contain shadow-sm shadow-slate-900/10"
                 title="أبو طلال — الإدارة"
-              >
-                أ
-              </div>
+              />
             ) : (
-              <>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-                  أبو طلال
-                </p>
-                <p className="mt-1 font-display text-lg font-bold tracking-tight text-slate-900">
-                  الإدارة
-                </p>
-                {user && (
-                  <p
-                    className="mt-2 truncate text-xs leading-relaxed text-slate-500"
-                    title={user.email}
-                  >
-                    {user.email}
+              <div className="flex items-start gap-3">
+                <img
+                  src="/app-icon.png"
+                  alt=""
+                  className="h-10 w-10 shrink-0 rounded-xl object-contain"
+                />
+                <div className="min-w-0 flex-1">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+                    أبو طلال
                   </p>
-                )}
-              </>
+                  <p className="mt-1 font-display text-lg font-bold tracking-tight text-slate-900">
+                    الإدارة
+                  </p>
+                  {user && (
+                    <p
+                      className="mt-2 truncate text-xs leading-relaxed text-slate-500"
+                      title={user.email}
+                    >
+                      {user.email}
+                    </p>
+                  )}
+                </div>
+              </div>
             )}
           </div>
           <nav
@@ -292,18 +299,25 @@ export function AdminLayout() {
                 }`}
               >
                 {!navCompact && (
-                  <div className="min-w-0 flex-1">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-                      أبو طلال
-                    </p>
-                    <p className="mt-1 font-display text-lg font-bold text-slate-900">
-                      الإدارة
-                    </p>
-                    {user && (
-                      <p className="mt-2 truncate text-xs text-slate-500">
-                        {user.email}
+                  <div className="flex min-w-0 flex-1 items-start gap-3">
+                    <img
+                      src="/app-icon.png"
+                      alt=""
+                      className="h-10 w-10 shrink-0 rounded-xl object-contain"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+                        أبو طلال
                       </p>
-                    )}
+                      <p className="mt-1 font-display text-lg font-bold tracking-tight text-slate-900">
+                        الإدارة
+                      </p>
+                      {user && (
+                        <p className="mt-2 truncate text-xs text-slate-500">
+                          {user.email}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 )}
                 <button
@@ -327,12 +341,12 @@ export function AdminLayout() {
                   </span>
                 </button>
                 {navCompact && (
-                  <div
-                    className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-600 font-display text-sm font-bold text-white shadow-sm"
+                  <img
+                    src="/app-icon.png"
+                    alt=""
+                    className="h-11 w-11 rounded-xl object-contain shadow-sm"
                     title="أبو طلال — الإدارة"
-                  >
-                    أ
-                  </div>
+                  />
                 )}
               </div>
               <nav

@@ -59,6 +59,12 @@ export function LoginPage() {
             العودة للمتجر
           </Link>
 
+          <img
+            src="/app-icon.png"
+            alt=""
+            className="mb-8 h-16 w-16 object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
+          />
+
           <div className="mb-2 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-sky-300">
             <ShieldCheck className="h-3.5 w-3.5" />
             دخول الموظفين

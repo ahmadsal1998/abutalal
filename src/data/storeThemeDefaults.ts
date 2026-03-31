@@ -116,8 +116,8 @@ export const defaultStoreThemeSettings: StoreThemeSettings = {
   },
   header: {
     logoText: 'أبو طلال',
-    logoImageUrl: null,
-    showLogoImage: false,
+    logoImageUrl: '/app-icon.png',
+    showLogoImage: true,
     chromeTemplateId: defaultHeaderChromeDef.id,
     chromeColors: { ...defaultHeaderChromeColors },
     chromeContent: { ...defaultHeaderChromeDef.defaultContent },
