@@ -1,4 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="96" fill="#0f172a"/>
-  <text x="256" y="300" text-anchor="middle" font-family="system-ui,sans-serif" font-size="200" font-weight="700" fill="#38bdf8">#</text>
+  <!-- Maskable: content kept within ~80% center safe zone -->
+  <rect width="512" height="512" rx="112" fill="#FCD34D" />
+  <image
+    href="/app-icon.png"
+    x="56"
+    y="56"
+    width="400"
+    height="400"
+    preserveAspectRatio="xMidYMid meet"
+  />
 </svg>

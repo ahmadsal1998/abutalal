@@ -10,14 +10,14 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['vite.svg', 'pwa-maskable.svg'],
+      includeAssets: ['app-icon.png', 'pwa-maskable.svg'],
       manifest: {
         name: 'أبو طلال للموبايل',
         short_name: 'أبو طلال',
         description:
           'متجر إلكتروني ولوحة إدارة — تجربة تطبيق على الجوال والويب.',
-        theme_color: '#0f172a',
-        background_color: '#f8fafc',
+        theme_color: '#FCD34D',
+        background_color: '#FEF9C3',
         display: 'standalone',
         orientation: 'portrait-primary',
         scope: '/',
@@ -35,7 +35,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,svg,woff2}'],
+        globPatterns: ['**/*.{js,css,html,ico,svg,png,woff2}'],
         navigateFallback: '/index.html',
         navigateFallbackDenylist: [/^\/api\//],
       },
